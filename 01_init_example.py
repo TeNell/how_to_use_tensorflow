@@ -1,3 +1,10 @@
+"""
+
+Author. Nell (dongboxiang.nell@gmail.com)
+Repos. https://github.com/TeNell 
+
+"""
+
 import tensorflow as tf
 import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
