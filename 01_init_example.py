@@ -10,6 +10,8 @@ W = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
 y = tf.nn.softmax(tf.matmul(x, W) + b)
 
+
+
 y_ = tf.placeholder(tf.float32, [None, 10])
 
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
@@ -28,6 +30,4 @@ for _ in range(1000):
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
-
-
 
